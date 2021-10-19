@@ -1,4 +1,4 @@
 # Livemark Project (template)
 
-A livemark project template:
+A Livemark project template:
 - https://frictionlessdata.github.io/livemark-project
