@@ -1,0 +1,23 @@
+brand:
+  text: Livemark Project
+about:
+  text: A Livemark project template
+github:
+  user: frictionlessdata
+  repo: livemark-project
+topics:
+  selector: h2
+site:
+  favicon: assets/favicon.ico
+  styles:
+    - style.css
+pages:
+  items:
+    - path: index
+    - path: pages/data
+links:
+  items:
+    - name: Frictionless
+      path: https://frictionlessdata.io
+    - name: Livemark
+      path: https://livemark.frictionlessdata.io
