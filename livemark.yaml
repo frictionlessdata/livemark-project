@@ -11,6 +11,8 @@ site:
   favicon: assets/favicon.ico
   styles:
     - style.css
+  scripts:
+    - script.js
 pages:
   items:
     - path: index
