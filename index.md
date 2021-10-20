@@ -18,18 +18,18 @@ We can pre-process our markdown file using [Jinja](https://jinja.palletsprojects
 
 ## Table
 
-We can visualize our data as a table using [HandsOnTable](https://handsontable.com/):
+We can visualize our data as a table using [DataTables](https://datatables.net/):
 
 ```yaml table
 data: data/cars.csv
-maxRows: 10
-filters: true
-dropdownMenu: true
-columnSorting:
-  initialConfig:
-    column: 2
-    sortOrder: desc
 width: 600
+columns:
+  - data: type
+  - data: brand
+  - data: model
+  - data: price
+  - data: kmpl
+  - data: bhp
 ```
 
 ## Chart
