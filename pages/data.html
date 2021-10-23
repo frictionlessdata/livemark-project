@@ -1804,6 +1804,11 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
         Data Collection
       </a>
           </li>
+        <li class="primary  ">
+      <a href="contrib.html" class="primary">
+        Contributing
+      </a>
+          </li>
       </ul>
 </div>
 
@@ -1815,7 +1820,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2021-10-23 06:12)
+  (2021-10-23 18:45)
 </div>
 
 <h1>Data Collection
@@ -1826,12 +1831,9 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <pre><code class="language-python">import os
 from frictionless import Resource
 
-if not os.path.exists('data/cars.csv'):
-    resource = Resource('https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv')
-    resource.write('data/cars.csv')
+resource = Resource('https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv')
+resource.write('data/cars.csv')
 </code></pre>
-
-<pre><code class="language-markup"></code></pre>
 <h2>Attributions</h2>
 <p>The data sources we have used:</p>
 <ul>
@@ -1840,6 +1842,11 @@ if not os.path.exists('data/cars.csv'):
 
 <div id="livemark-signs">
   <div>
+        <div class="next">
+      <a href="/pages/contrib.html">
+        Contributing »
+      </a>
+    </div>
             <div class="prev">
       <a href="/index.html">
         « Livemark Project
@@ -2237,7 +2244,13 @@ document.addEventListener("DOMContentLoaded", function () {
           'name': 'Data Collection',
           'path': 'pages/data',
           'relpath': 'data',
-          'text': "# Data Collection ## Loading Let\u0027s load the dataset we\u0027re going to use: ```python script import os from frictionless import Resource if not os.path.exists(\u0027data/cars.csv\u0027): resource = Resource(\u0027https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv\u0027) resource.write(\u0027data/cars.csv\u0027) ``` ## Attributions The data sources we have used: - The cars example provided by [Visdown](https://visdown.com/) project.",
+          'text': "# Data Collection ## Loading Let\u0027s load the dataset we\u0027re going to use: ```python script run=data import os from frictionless import Resource resource = Resource(\u0027https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv\u0027) resource.write(\u0027data/cars.csv\u0027) ``` ## Attributions The data sources we have used: - The cars example provided by [Visdown](https://visdown.com/) project.",
+      },
+          'pages/contrib': {
+          'name': 'Contributing',
+          'path': 'pages/contrib',
+          'relpath': 'contrib',
+          'text': "# Contributing ## Install Run the following script to initiate a virtual environmentdependencies (optional): ```bash python3.8 -m venv .python source .python/bin/activate ``` Install the dependencies: ```bash $ pip install -r requirements.txt ```",
       },
       };
   const searchIndex = lunr(function () {

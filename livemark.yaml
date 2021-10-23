@@ -17,6 +17,7 @@ pages:
   items:
     - path: index
     - path: pages/data
+    - path: pages/contrib
 links:
   items:
     - name: Frictionless
