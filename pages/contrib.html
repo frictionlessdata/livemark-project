@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Run the following script to initiate a virtual environmentdependencies (optional):">
-<meta name="keywords" content="contributing">
+<meta name="description" content="Welcome! We're happy you'd like to contribute! This is an open project, and we value contributions from everyone.">
+<meta name="keywords" content="contribute">
 <link rel="icon" href="../assets/favicon.ico">
-<title>Contributing | Livemark Project</title>
+<title>Contribute | Livemark Project</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
@@ -1806,7 +1806,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
           </li>
         <li class="primary  active">
       <a href="contrib.html" class="primary">
-        Contributing
+        Contribute
       </a>
           </li>
       </ul>
@@ -1820,19 +1820,55 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2021-10-23 18:46)
+  (2021-10-23 20:03)
 </div>
 
-<h1>Contributing
+<h1>Contribute
 <span>(template)<span>
 </span></span></h1>
-<h2>Install</h2>
-<p>Run the following script to initiate a virtual environmentdependencies (optional):</p>
-<pre><code class="language-bash">python3.8 -m venv .python
-source .python/bin/activate
+<p>Welcome! We're happy you'd like to contribute! This is an open project, and we value contributions from everyone.</p>
+<p>We use Github as a code and issues hosting platform. To report a bug or propose a new feature, please open an <a href="https://github.com/frictionlessdata/livemark-project/issues">issue</a>. For pull requests, we would ask you initially create an issue and then create a pull requests linked to this issue.</p>
+<p>To start working on the project clone the repository and enter its directory:</p>
+<pre><code class="language-bash">$ git clone git@github.com:frictionlessdata/livemark-project.git
+$ cd livemark-project
 </code></pre>
-<p>Install the dependencies:</p>
-<pre><code class="language-bash">$ pip install -r requirements.txt
+<p>Create a virtual environment (optional):</p>
+<pre><code class="language-bash">$ python3 -m venv .python
+$ source .python/bin/activate
+</code></pre>
+<p>And install livemark:</p>
+<pre><code>$ pip install livemark
+</code></pre>
+<h2>Install</h2>
+<p>Run the following script to install dependencies:</p>
+<pre><code class="language-bash">$ livemark run install
+</code></pre>
+<p>Which will run:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<h2>Data</h2>
+<p>To collect the data use the data collection script (run only if you want to update the data):</p>
+<pre><code class="language-bash">$ livemark run data
+</code></pre>
+<p>Which will run all the scripts on the <a href="page">data.html</a>.</p>
+<h2>Build</h2>
+<blockquote>
+<p>See the Livemark documentation for full details: <a href="https://livemark.frictionlessdata.io/">https://livemark.frictionlessdata.io/</a></p>
+</blockquote>
+<p>You can then use the command-line interface to build the output HTML file:</p>
+<pre><code class="language-bash">$ livemark build
+</code></pre>
+<p>Or start a livereload server to automatically reload the output page as you modify the input Markdown document:</p>
+<pre><code class="language-bash">$ livemark start
+</code></pre>
+<h2>Deploy</h2>
+<p>The project is deployed automatically to Github Pages on every push to "main". That means that the page will automatically be deployed every time there is a change approved from a Pull Request.</p>
+<p>If you'd like to update Github Issue/PR templates run:</p>
+<pre><code class="language-bash">$ livemark run github
+</code></pre>
+<p>Which will run:</p>
+<pre><code class="language-bash">sed -i -E "s/@(\w*)/@$(head -n 1 LEAD.md)/" .github/issue_template.md
+sed -i -E "s/@(\w*)/@$(head -n 1 LEAD.md)/" .github/pull_request_template.md
 </code></pre>
 
 <div id="livemark-signs">
@@ -2237,10 +2273,10 @@ document.addEventListener("DOMContentLoaded", function () {
           'text': "# Data Collection ## Loading Let\u0027s load the dataset we\u0027re going to use: ```python script run=data import os from frictionless import Resource resource = Resource(\u0027https://raw.githubusercontent.com/frictionlessdata/livemark/main/data/cars.csv\u0027) resource.write(\u0027data/cars.csv\u0027) ``` ## Attributions The data sources we have used: - The cars example provided by [Visdown](https://visdown.com/) project.",
       },
           'pages/contrib': {
-          'name': 'Contributing',
+          'name': 'Contribute',
           'path': 'pages/contrib',
           'relpath': 'contrib',
-          'text': "# Contributing ## Install Run the following script to initiate a virtual environmentdependencies (optional): ```bash python3.8 -m venv .python source .python/bin/activate ``` Install the dependencies: ```bash $ pip install -r requirements.txt ```",
+          'text': "# Contribute Welcome! We\u0027re happy you\u0027d like to contribute! This is an open project, and we value contributions from everyone. We use Github as a code and issues hosting platform. To report a bug or propose a new feature, please open an [issue](https://github.com/frictionlessdata/livemark-project/issues). For pull requests, we would ask you initially create an issue and then create a pull requests linked to this issue. To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/livemark-project.git $ cd livemark-project ``` Create a virtual environment (optional): ```bash $ python3 -m venv .python $ source .python/bin/activate ``` And install livemark: ``` $ pip install livemark ``` ## Install Run the following script to install dependencies: ```bash $ livemark run install ``` Which will run: ```bash task id=install pip install -r requirements.txt ``` ## Data To collect the data use the data collection script (run only if you want to update the data): ```bash $ livemark run data ``` Which will run all the scripts on the [data.html](page). ## Build \u003e See the Livemark documentation for full details: https://livemark.frictionlessdata.io/ You can then use the command-line interface to build the output HTML file: ```bash $ livemark build ``` Or start a livereload server to automatically reload the output page as you modify the input Markdown document: ```bash $ livemark start ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". That means that the page will automatically be deployed every time there is a change approved from a Pull Request. If you\u0027d like to update Github Issue/PR templates run: ```bash $ livemark run github ``` Which will run: ```bash task id=github sed -i -E \"s/@(\\w*)/@$(head -n 1 LEAD.md)/\" .github/issue_template.md sed -i -E \"s/@(\\w*)/@$(head -n 1 LEAD.md)/\" .github/pull_request_template.md ```",
       },
       };
   const searchIndex = lunr(function () {
