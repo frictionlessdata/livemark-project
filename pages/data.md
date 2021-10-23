@@ -4,7 +4,7 @@
 
 Let's load the dataset we're going to use:
 
-```python script run=data
+```python task id=data
 import os
 from frictionless import Resource
 
