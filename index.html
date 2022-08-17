@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="It's a template document created automatically to introduce Livemark. We will list here core [Livemark](https://livemark.frictionlessdata.io/) features and you can play with theme live editing the document. It's possible to use any standard Markdown features as well.">
+<meta name="description" content="It's a template document created automatically to introduce Livemark. We will list here core  Livemark  features and you can play with theme live editing the document. It's possible to use any standard Markdown features as well.">
 <meta name="keywords" content="livemark,project">
 <link rel="icon" href="assets/favicon.ico">
 <title>Livemark Project</title>
@@ -1706,6 +1706,17 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </style>
 <style>
 
+.nav-tabs {
+    padding-left: 0 !important;
+}
+
+.nav-item {
+    margin-top: 0 !important;
+}
+
+</style>
+<style>
+
 .livemark-task pre:first-child {
   margin-bottom: 0 !important;
   border-bottom: dashed 1px #ccc;
@@ -1756,7 +1767,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
       <a href="https://github.com/frictionlessdata/livemark-project/edit/main/index.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-    (2022-08-16 06:16)
+    (2022-08-17 06:17)
 </div>
 
 <h1>Livemark Project
@@ -1780,7 +1791,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </ul>
 <h2>Table</h2>
 <p>We can visualize our data as a table using <a href="https://datatables.net/">DataTables</a>:</p>
-<div class="livemark-table" style="overflow-x: auto">
+<div><div class="livemark-table" style="overflow-x: auto">
   <div style="width: 600px">
     <table id="livemark-table-1">
       <thead>
@@ -2150,9 +2161,9 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 </script>
 
-<h2>Chart</h2>
+</div><h2>Chart</h2>
 <p>Another option is to draw a chart using <a href="https://vega.github.io/vega-lite/">Vega</a>:</p>
-<div class="livemark-chart" style="overflow-x: auto">
+<div><div class="livemark-chart" style="overflow-x: auto">
   <div id="livemark-chart-1">
   </div>
 </div>
@@ -2162,9 +2173,9 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 </script>
 
-<h2>Script</h2>
+</div><h2>Script</h2>
 <p>Moreover, we can execute scripts in <a href="https://www.python.org/">Python</a>/<a href="https://www.gnu.org/software/bash/">Bash</a>:</p>
-<pre><code class="language-python">for number in range(1, 6):
+<div><pre><code class="language-python">for number in range(1, 6):
     print(f'Hello World #{number}!')
 </code></pre>
 
@@ -2173,9 +2184,9 @@ Hello World #2!
 Hello World #3!
 Hello World #4!
 Hello World #5!</code></pre>
-<h2>Markup</h2>
+</div><h2>Markup</h2>
 <p>Markdown is not enough? Finally, let's add some markup with <a href="https://getbootstrap.com/">Bootstrap</a>:</p>
-<div style="max-width: 600px">
+<div><div style="max-width: 600px">
 <div class="container">
 <div class="row">
 <div class="col-sm">
@@ -2201,6 +2212,7 @@ Hello World #5!</code></pre>
   <p><strong>Table Schema</strong></p>
   <p>A simple format to declare a schema for tabular data. The schema is designed to be expressible in JSON.</p>
   </div>
+</div>
 </div>
 </div>
 </div>
