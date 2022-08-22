@@ -12,7 +12,7 @@ It's a template document created automatically to introduce Livemark. We will li
 
 We can pre-process our markdown file using [Jinja](https://jinja.palletsprojects.com/):
 
-{% for car in frictionless.extract('data/cars.csv', layout={"limitRows": 5}) %}
+{% for car in frictionless.extract('data/cars.csv')[:5] %}
 - {{ car.brand }} {{ car.model }}: ${{ car.price }}
 {% endfor %}
 
