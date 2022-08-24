@@ -1788,7 +1788,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
       <a href="https://github.com/frictionlessdata/livemark-project/edit/main/pages/data.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-    (2022-08-23 06:26)
+    (2022-08-24 06:18)
 </div>
 
 <h1>Data Collection
@@ -1919,7 +1919,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Called each time a heading is parsed. Expects a string in return.
     headingLabelCallback: (label) => {
       label = label.replace(/(^#|#$)/g, "").trim();
-      label = label.replace(/\(.*?\)$/g, "");
+      // label = label.replace(/\(.*?\)$/g, "");
       return label;
     },
     // Disable generating ordered lists (ol)
